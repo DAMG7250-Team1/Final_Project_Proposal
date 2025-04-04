@@ -11,7 +11,7 @@ SkillMatch AI is a personalized job recommendation system leveraging the power o
 
 # Methodology
 
-Data Sources
+## Data Sources
 
 Unstructured
 Resumes (PDFs): User-uploaded resumes containing personal details, experience, skills, and education.
@@ -23,7 +23,7 @@ Job Metadata: Role, industry, and required skills stored in databases.
 Vector Embeddings: Generated from resumes and GitHub data using Instructor for semantic search.
 
 
-Technologies and Tools
+## Technologies and Tools
 
 
 Airflow: Used for scheduling tasks, including data ingestion and skill-job mapping updates.
@@ -44,14 +44,14 @@ Data cleaning, transformation, and vectorization to prepare for job matching.
 Matching job descriptions with candidate resumes using similarity scoring and vector embeddings.
 
 
-Data Processing and Transformation
+## Data Processing and Transformation
 
 Parse resumes and extract relevant skills and experience.
 Analyze GitHub profiles for project details and technologies used.
 Match resumes to job descriptions based on skill and tech stack alignment.
 
 
-Disclosures
+## Disclosures
 
 WE ATTEST THAT WE HAVEN'T USED ANY OTHER STUDENTS' WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 We acknowledge that all team members contributed equally and worked to present the final project provided in this submission. All participants played a role in crucial ways, and the results reflect our collective efforts.
@@ -62,21 +62,21 @@ Cursor
 Deepseek
 Claude
 
-Team Members
+# Team Members
 
 Contributions
 
 Husain
 
-33%
+33.3%
 
 Sahil Kasliwal
 
-33%
+33.3%
 
 Dhrumil Patel
 
-33%
+33.3%
 
 
 
