@@ -65,11 +65,17 @@ Claude
 Team Members
 
 Contributions
+
 Husain
+
 33%
+
 Sahil Kasliwal
+
 33%
+
 Dhrumil Patel
+
 33%
 
 
