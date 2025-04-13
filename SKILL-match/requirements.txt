@@ -1,0 +1,34 @@
+# Web Scraping
+selenium
+webdriver-manager
+
+# FastAPI and related
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+
+# PDF Processing
+PyPDF2
+pdf2image
+pytesseract
+
+# AWS
+boto3
+botocore
+
+# GitHub API
+PyGithub
+
+# Vector Database
+pinecone
+
+# OpenAI
+openai
+
+# Utilities
+requests
+python-dateutil
+pydantic
+
+apache-airflow
