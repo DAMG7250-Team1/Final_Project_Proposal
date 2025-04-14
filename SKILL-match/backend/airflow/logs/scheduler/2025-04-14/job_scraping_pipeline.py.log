@@ -1,0 +1,14 @@
+[2025-04-13T20:00:54.370-0400] {processor.py:161} INFO - Started process (PID=90118) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:00:54.370-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py for tasks to queue
+[2025-04-13T20:00:54.371-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:00:54.371-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:00:54.902-0400] {processor.py:840} INFO - DAG(s) 'job_scraping_pipeline' retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:00:54.981-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:00:54.981-0400] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-04-13T20:00:54.986-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:00:54.986-0400] {dag.py:3954} INFO - Setting next_dagrun for job_scraping_pipeline to 2025-04-13 18:00:00+00:00, run_after=2025-04-14 00:00:00+00:00
+[2025-04-13T20:00:54.992-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py took 0.623 seconds
+[2025-04-13T20:06:34.843-0400] {processor.py:161} INFO - Started process (PID=92243) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:06:34.844-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py for tasks to queue
+[2025-04-13T20:06:34.844-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:06:34.844-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:06:35.475-0400] {processor.py:840} INFO - DAG(s) 'job_scraping_pipeline' retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py
+[2025-04-13T20:06:35.515-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:06:35.515-0400] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-04-13T20:06:35.521-0400] {logging_mixin.py:188} INFO - [2025-04-13T20:06:35.520-0400] {dag.py:3954} INFO - Setting next_dagrun for job_scraping_pipeline to 2025-04-13 18:00:00+00:00, run_after=2025-04-14 00:00:00+00:00
+[2025-04-13T20:06:35.527-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py took 0.685 seconds

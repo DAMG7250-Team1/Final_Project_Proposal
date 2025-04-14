@@ -1,0 +1,43 @@
+[2025-04-13T15:51:33.572-0400] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-04-13T15:51:33.587-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_scraping_pipeline.scrape_jobs scheduled__2025-04-12T00:00:00+00:00 [queued]>
+[2025-04-13T15:51:33.588-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_scraping_pipeline.scrape_jobs scheduled__2025-04-12T00:00:00+00:00 [queued]>
+[2025-04-13T15:51:33.588-0400] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-04-13T15:51:33.592-0400] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): scrape_jobs> on 2025-04-12 00:00:00+00:00
+[2025-04-13T15:51:33.597-0400] {logging_mixin.py:188} WARNING - /opt/anaconda3/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6744) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T15:51:33.597-0400] {standard_task_runner.py:63} INFO - Started process 6761 to run task
+[2025-04-13T15:51:33.597-0400] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'job_scraping_pipeline', 'scrape_jobs', 'scheduled__2025-04-12T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/job_scraping_pipeline.py', '--cfg-path', '/var/folders/0h/2g2z3yf96870c1b6bngz18w00000gn/T/tmpmndtf57z']
+[2025-04-13T15:51:33.598-0400] {standard_task_runner.py:91} INFO - Job 2: Subtask scrape_jobs
+[2025-04-13T15:51:33.610-0400] {task_command.py:426} INFO - Running <TaskInstance: job_scraping_pipeline.scrape_jobs scheduled__2025-04-12T00:00:00+00:00 [running]> on host sahils-macbook-air-2.local
+[2025-04-13T15:51:33.760-0400] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='job_scraping_pipeline' AIRFLOW_CTX_TASK_ID='scrape_jobs' AIRFLOW_CTX_EXECUTION_DATE='2025-04-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-12T00:00:00+00:00'
+[2025-04-13T15:51:33.761-0400] {taskinstance.py:430} INFO - ::endgroup::
+[2025-04-13T15:51:33.766-0400] {job_scraping_pipeline.py:54} INFO - Starting job scraping task
+[2025-04-13T15:51:33.767-0400] {scraper.py:73} INFO - Starting job scraping...
+[2025-04-13T15:51:33.767-0400] {logger.py:11} INFO - ====== WebDriver manager ======
+[2025-04-13T15:51:33.914-0400] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2025-04-13T15:51:33.975-0400] {logger.py:11} INFO - Get LATEST chromedriver version for google-chrome
+[2025-04-13T15:51:34.014-0400] {logger.py:11} INFO - Driver [/Users/sahilkasliwal/.wdm/drivers/chromedriver/mac64/135.0.7049.84/chromedriver-mac-arm64/chromedriver] found in cache
+[2025-04-13T15:51:41.529-0400] {scraper.py:91} INFO - Attempting to log in to JobRight.ai...
+[2025-04-13T15:51:48.854-0400] {scraper.py:110} INFO - Navigating to job listings page...
+[2025-04-13T15:51:54.286-0400] {scraper.py:115} INFO - Scrolling to load more job listings...
+[2025-04-13T15:52:14.420-0400] {scraper.py:122} INFO - Found 10 jobs on the page
+[2025-04-13T15:52:14.423-0400] {scraper.py:143} INFO - Starting to scrape job listings...
+[2025-04-13T15:52:17.672-0400] {scraper.py:197} INFO - Scraped job: Software Quality Engineer @ Red Hat
+[2025-04-13T15:52:18.110-0400] {scraper.py:197} INFO - Scraped job: Machine Learning Engineer (US) @ Coram AI
+[2025-04-13T15:52:18.827-0400] {scraper.py:197} INFO - Scraped job: Software Engineer II, Java @ S&P Global
+[2025-04-13T15:52:19.582-0400] {scraper.py:197} INFO - Scraped job: Back End Developer @ Imetris Corporation
+[2025-04-13T15:52:20.011-0400] {scraper.py:197} INFO - Scraped job: Senior Machine Learning Engineer @ Dynata
+[2025-04-13T15:52:20.432-0400] {scraper.py:197} INFO - Scraped job: SDE II - Backend @ Nium
+[2025-04-13T15:52:21.015-0400] {scraper.py:197} INFO - Scraped job: Software Engineer III (Full-Stack) @ Walmart Data Ventures
+[2025-04-13T15:52:21.533-0400] {scraper.py:197} INFO - Scraped job: Backend Martech Engineer @ Inkitt
+[2025-04-13T15:52:22.167-0400] {scraper.py:197} INFO - Scraped job: DevOps (Embedded) Software Engineer 2 (C++) @ Garmin
+[2025-04-13T15:52:22.874-0400] {scraper.py:197} INFO - Scraped job: Network Engineer @ NetApp
+[2025-04-13T15:52:22.995-0400] {scraper.py:221} INFO - Browser closed successfully
+[2025-04-13T15:52:23.579-0400] {scraper.py:58} INFO - Successfully saved data to s3://skillmatchai/jobs/raw_files/jobright_jobs_20250413_155222.json
+[2025-04-13T15:52:23.579-0400] {scraper.py:231} INFO - Successfully saved 10 jobs to s3://skillmatchai/jobs/raw_files/jobright_jobs_20250413_155222.json
+[2025-04-13T15:52:23.580-0400] {job_scraping_pipeline.py:58} INFO - Job scraping completed successfully
+[2025-04-13T15:52:23.580-0400] {python.py:237} INFO - Done. Returned value was: None
+[2025-04-13T15:52:23.581-0400] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-04-13T15:52:23.586-0400] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=job_scraping_pipeline, task_id=scrape_jobs, execution_date=20250412T000000, start_date=20250413T195133, end_date=20250413T195223
+[2025-04-13T15:52:23.632-0400] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-04-13T15:52:23.640-0400] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T15:52:23.640-0400] {local_task_job_runner.py:222} INFO - ::endgroup::

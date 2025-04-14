@@ -1,0 +1,343 @@
+[2025-04-13T18:15:41.613-0400] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-04-13T18:15:41.624-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_scraping_pipeline.create_embeddings scheduled__2025-04-13T21:00:00+00:00 [queued]>
+[2025-04-13T18:15:41.626-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_scraping_pipeline.create_embeddings scheduled__2025-04-13T21:00:00+00:00 [queued]>
+[2025-04-13T18:15:41.626-0400] {taskinstance.py:2303} INFO - Starting attempt 4 of 5
+[2025-04-13T18:15:41.629-0400] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): create_embeddings> on 2025-04-13 21:00:00+00:00
+[2025-04-13T18:15:41.634-0400] {logging_mixin.py:188} WARNING - /opt/anaconda3/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=50445) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T18:15:41.635-0400] {standard_task_runner.py:63} INFO - Started process 50458 to run task
+[2025-04-13T18:15:41.634-0400] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'job_scraping_pipeline', 'create_embeddings', 'scheduled__2025-04-13T21:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/job_scraping_pipeline.py', '--cfg-path', '/var/folders/0h/2g2z3yf96870c1b6bngz18w00000gn/T/tmpj5gm7pa6']
+[2025-04-13T18:15:41.636-0400] {standard_task_runner.py:91} INFO - Job 16: Subtask create_embeddings
+[2025-04-13T18:15:41.648-0400] {task_command.py:426} INFO - Running <TaskInstance: job_scraping_pipeline.create_embeddings scheduled__2025-04-13T21:00:00+00:00 [running]> on host sahils-macbook-air-2.local
+[2025-04-13T18:15:41.794-0400] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='job_scraping_pipeline' AIRFLOW_CTX_TASK_ID='create_embeddings' AIRFLOW_CTX_EXECUTION_DATE='2025-04-13T21:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-13T21:00:00+00:00'
+[2025-04-13T18:15:41.795-0400] {taskinstance.py:430} INFO - ::endgroup::
+[2025-04-13T18:15:41.800-0400] {job_scraping_pipeline.py:66} INFO - Starting embeddings processing task
+[2025-04-13T18:15:42.068-0400] {embeddings.py:78} INFO - Connected to Pinecone index: skillmatch-index
+[2025-04-13T18:15:42.437-0400] {embeddings.py:100} INFO - Found 14 job files in S3
+[2025-04-13T18:15:42.438-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250411_182925.json
+[2025-04-13T18:15:42.544-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250411_182925.json
+[2025-04-13T18:15:43.179-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:43.183-0400] {embeddings.py:187} INFO - Extracted 12 skills
+[2025-04-13T18:15:43.468-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:43.516-0400] {embeddings.py:305} INFO - Processed job 1/10: Data Analyst at S&P Global
+[2025-04-13T18:15:44.402-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:44.403-0400] {embeddings.py:187} INFO - Extracted 16 skills
+[2025-04-13T18:15:44.792-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:44.865-0400] {embeddings.py:305} INFO - Processed job 2/10: AI Engineer, Multimodal Models at CliniComp
+[2025-04-13T18:15:45.696-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:45.700-0400] {embeddings.py:187} INFO - Extracted 22 skills
+[2025-04-13T18:15:46.264-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:46.338-0400] {embeddings.py:305} INFO - Processed job 3/10: Software Engineer II at Tempus AI
+[2025-04-13T18:15:47.010-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:47.011-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:15:47.434-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:47.512-0400] {embeddings.py:305} INFO - Processed job 4/10: AI Engineer – LLM-Based Content Moderation at TrustLab
+[2025-04-13T18:15:48.025-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:48.027-0400] {embeddings.py:187} INFO - Extracted 11 skills
+[2025-04-13T18:15:48.357-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:48.360-0400] {embeddings.py:305} INFO - Processed job 5/10: Data Scientist III at RELX
+[2025-04-13T18:15:48.996-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:49.001-0400] {embeddings.py:187} INFO - Extracted 18 skills
+[2025-04-13T18:15:49.197-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:49.214-0400] {embeddings.py:305} INFO - Processed job 6/10: Senior Software Engineer I at RELX
+[2025-04-13T18:15:49.869-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:49.877-0400] {embeddings.py:187} INFO - Extracted 12 skills
+[2025-04-13T18:15:50.137-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:50.139-0400] {embeddings.py:305} INFO - Processed job 7/10: Data Engineer I - Marketing Analytics (Hybrid) at Unum
+[2025-04-13T18:15:51.032-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:51.039-0400] {embeddings.py:187} INFO - Extracted 18 skills
+[2025-04-13T18:15:51.292-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:51.311-0400] {embeddings.py:305} INFO - Processed job 8/10: Senior Data Scientist I at RELX
+[2025-04-13T18:15:51.924-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:51.925-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:15:52.176-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:52.222-0400] {embeddings.py:305} INFO - Processed job 9/10: Senior Data Scientist III - 0125-US-011 at RELX
+[2025-04-13T18:15:53.003-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:53.007-0400] {embeddings.py:187} INFO - Extracted 16 skills
+[2025-04-13T18:15:53.393-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:53.470-0400] {embeddings.py:305} INFO - Processed job 10/10: Web Developer at Airtable
+[2025-04-13T18:15:53.772-0400] {embeddings.py:140} INFO - Saved embeddings to s3://skillmatchai/jobs/embeddings/jobright_jobs_20250411_182925_embeddings_20250413_181553.json
+[2025-04-13T18:15:54.199-0400] {embeddings.py:285} INFO - Upserted 10 unique jobs to Pinecone
+[2025-04-13T18:15:54.200-0400] {job_scraping_pipeline.py:80} INFO - Successfully processed jobs/raw_files/jobright_jobs_20250411_182925.json
+[2025-04-13T18:15:54.200-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250412_140103.json
+[2025-04-13T18:15:54.248-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250412_140103.json
+[2025-04-13T18:15:54.840-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:54.844-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:15:55.157-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:55.159-0400] {embeddings.py:305} INFO - Processed job 1/10: Forward Deployed Software Engineer at Palantir Technologies
+[2025-04-13T18:15:56.268-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:56.270-0400] {embeddings.py:187} INFO - Extracted 26 skills
+[2025-04-13T18:15:56.606-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:56.650-0400] {embeddings.py:305} INFO - Processed job 2/10: Data Engineer (AWS, Databricks) at NISC
+[2025-04-13T18:15:57.639-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:57.645-0400] {embeddings.py:187} INFO - Extracted 20 skills
+[2025-04-13T18:15:57.909-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:57.926-0400] {embeddings.py:305} INFO - Processed job 3/10: Data Engineer II, GTPC Tech, AWS Security Assurance at Amazon Web Services (AWS)
+[2025-04-13T18:15:58.726-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:15:58.728-0400] {embeddings.py:187} INFO - Extracted 16 skills
+[2025-04-13T18:15:58.936-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:15:58.978-0400] {embeddings.py:305} INFO - Processed job 4/10: Software Engineer III - Big Data at JPMorganChase
+[2025-04-13T18:16:00.166-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:00.168-0400] {embeddings.py:187} INFO - Extracted 16 skills
+[2025-04-13T18:16:00.585-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:00.586-0400] {embeddings.py:305} INFO - Processed job 5/10: Machine Learning Engineer (US) at Coram AI
+[2025-04-13T18:16:00.946-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:00.947-0400] {embeddings.py:187} INFO - Extracted 4 skills
+[2025-04-13T18:16:01.306-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:01.307-0400] {embeddings.py:305} INFO - Processed job 6/10: Senior Software Engineer at Galileo Financial Technologies
+[2025-04-13T18:16:03.068-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:03.074-0400] {embeddings.py:187} INFO - Extracted 41 skills
+[2025-04-13T18:16:03.422-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:03.477-0400] {embeddings.py:305} INFO - Processed job 7/10: Security Engineers & Architects | Cybersecurity @ JPMC - Plano-TX at JPMorganChase
+[2025-04-13T18:16:04.050-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:04.060-0400] {embeddings.py:187} INFO - Extracted 10 skills
+[2025-04-13T18:16:04.456-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:04.459-0400] {embeddings.py:305} INFO - Processed job 8/10: Web Developer at Midland States Bank
+[2025-04-13T18:16:05.648-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:05.650-0400] {embeddings.py:187} INFO - Extracted 16 skills
+[2025-04-13T18:16:05.865-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:05.878-0400] {embeddings.py:305} INFO - Processed job 9/10: Security Engineer, AWS Security Cloud Response at Amazon Web Services (AWS)
+[2025-04-13T18:16:06.551-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:06.555-0400] {embeddings.py:187} INFO - Extracted 17 skills
+[2025-04-13T18:16:06.889-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:06.957-0400] {embeddings.py:305} INFO - Processed job 10/10: AI/NLP/Data Engineer at Agent IQ
+[2025-04-13T18:16:07.402-0400] {embeddings.py:140} INFO - Saved embeddings to s3://skillmatchai/jobs/embeddings/jobright_jobs_20250412_140103_embeddings_20250413_181606.json
+[2025-04-13T18:16:07.753-0400] {embeddings.py:285} INFO - Upserted 10 unique jobs to Pinecone
+[2025-04-13T18:16:07.755-0400] {job_scraping_pipeline.py:80} INFO - Successfully processed jobs/raw_files/jobright_jobs_20250412_140103.json
+[2025-04-13T18:16:07.757-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250412_145018.json
+[2025-04-13T18:16:07.924-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250412_145018.json
+[2025-04-13T18:16:08.553-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:08.649-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:16:08.984-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:08.987-0400] {embeddings.py:305} INFO - Processed job 1/10: Forward Deployed Software Engineer at Palantir Technologies
+[2025-04-13T18:16:10.080-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:10.081-0400] {embeddings.py:187} INFO - Extracted 26 skills
+[2025-04-13T18:16:10.748-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:10.759-0400] {embeddings.py:305} INFO - Processed job 2/10: Data Engineer (AWS, Databricks) at NISC
+[2025-04-13T18:16:11.673-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:11.676-0400] {embeddings.py:187} INFO - Extracted 20 skills
+[2025-04-13T18:16:12.125-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:12.167-0400] {embeddings.py:305} INFO - Processed job 3/10: Data Engineer II, GTPC Tech, AWS Security Assurance at Amazon Web Services (AWS)
+[2025-04-13T18:16:13.902-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:13.905-0400] {embeddings.py:187} INFO - Extracted 43 skills
+[2025-04-13T18:16:14.416-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:14.417-0400] {embeddings.py:305} INFO - Processed job 4/10: Security Engineers & Architects | Cybersecurity @ JPMC - Plano-TX at JPMorganChase
+[2025-04-13T18:16:14.945-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:14.948-0400] {embeddings.py:187} INFO - Extracted 4 skills
+[2025-04-13T18:16:15.264-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:15.297-0400] {embeddings.py:305} INFO - Processed job 5/10: Senior Software Engineer at Galileo Financial Technologies
+[2025-04-13T18:16:15.961-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:15.964-0400] {embeddings.py:187} INFO - Extracted 17 skills
+[2025-04-13T18:16:16.413-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:16.436-0400] {embeddings.py:305} INFO - Processed job 6/10: AI/NLP/Data Engineer at Agent IQ
+[2025-04-13T18:16:17.177-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:17.179-0400] {embeddings.py:187} INFO - Extracted 14 skills
+[2025-04-13T18:16:17.445-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:17.562-0400] {embeddings.py:305} INFO - Processed job 7/10: Back End Developer at Baanyan Software Services, Inc.
+[2025-04-13T18:16:18.607-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:18.611-0400] {embeddings.py:187} INFO - Extracted 21 skills
+[2025-04-13T18:16:18.939-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:19.004-0400] {embeddings.py:305} INFO - Processed job 8/10: Software Engineer, Data Streaming, Duo Security at Cisco
+[2025-04-13T18:16:20.073-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:20.077-0400] {embeddings.py:187} INFO - Extracted 20 skills
+[2025-04-13T18:16:20.705-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:20.751-0400] {embeddings.py:305} INFO - Processed job 9/10: Software Engineer III (Java/AWS) at JPMorganChase
+[2025-04-13T18:16:21.562-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:21.566-0400] {embeddings.py:187} INFO - Extracted 17 skills
+[2025-04-13T18:16:21.804-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:21.824-0400] {embeddings.py:305} INFO - Processed job 10/10: Security Engineer, AWS Security Cloud Response at Amazon Web Services (AWS)
+[2025-04-13T18:16:22.472-0400] {embeddings.py:140} INFO - Saved embeddings to s3://skillmatchai/jobs/embeddings/jobright_jobs_20250412_145018_embeddings_20250413_181621.json
+[2025-04-13T18:16:23.018-0400] {embeddings.py:285} INFO - Upserted 10 unique jobs to Pinecone
+[2025-04-13T18:16:23.020-0400] {job_scraping_pipeline.py:80} INFO - Successfully processed jobs/raw_files/jobright_jobs_20250412_145018.json
+[2025-04-13T18:16:23.021-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250412_145425.json
+[2025-04-13T18:16:23.157-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250412_145425.json
+[2025-04-13T18:16:23.894-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:23.896-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:16:24.182-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:24.197-0400] {embeddings.py:305} INFO - Processed job 1/10: Forward Deployed Software Engineer at Palantir Technologies
+[2025-04-13T18:16:25.270-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:25.271-0400] {embeddings.py:187} INFO - Extracted 26 skills
+[2025-04-13T18:16:25.596-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:25.642-0400] {embeddings.py:305} INFO - Processed job 2/10: Data Engineer (AWS, Databricks) at NISC
+[2025-04-13T18:16:26.470-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:26.473-0400] {embeddings.py:187} INFO - Extracted 20 skills
+[2025-04-13T18:16:26.799-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:26.801-0400] {embeddings.py:305} INFO - Processed job 3/10: Data Engineer II, GTPC Tech, AWS Security Assurance at Amazon Web Services (AWS)
+[2025-04-13T18:16:27.080-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:27.084-0400] {embeddings.py:187} INFO - Extracted 4 skills
+[2025-04-13T18:16:27.411-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:27.524-0400] {embeddings.py:305} INFO - Processed job 4/10: Senior Software Engineer at Galileo Financial Technologies
+[2025-04-13T18:16:28.907-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:28.908-0400] {embeddings.py:187} INFO - Extracted 41 skills
+[2025-04-13T18:16:29.313-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:29.326-0400] {embeddings.py:305} INFO - Processed job 5/10: Security Engineers & Architects | Cybersecurity @ JPMC - Plano-TX at JPMorganChase
+[2025-04-13T18:16:30.383-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:30.474-0400] {embeddings.py:187} INFO - Extracted 17 skills
+[2025-04-13T18:16:30.809-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:30.882-0400] {embeddings.py:305} INFO - Processed job 6/10: AI/NLP/Data Engineer at Agent IQ
+[2025-04-13T18:16:31.716-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:31.719-0400] {embeddings.py:187} INFO - Extracted 14 skills
+[2025-04-13T18:16:32.056-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:32.066-0400] {embeddings.py:305} INFO - Processed job 7/10: Back End Developer at Baanyan Software Services, Inc.
+[2025-04-13T18:16:33.183-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:33.186-0400] {embeddings.py:187} INFO - Extracted 21 skills
+[2025-04-13T18:16:33.624-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:33.645-0400] {embeddings.py:305} INFO - Processed job 8/10: Software Engineer, Data Streaming, Duo Security at Cisco
+[2025-04-13T18:16:34.402-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:34.402-0400] {embeddings.py:187} INFO - Extracted 18 skills
+[2025-04-13T18:16:34.716-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:34.768-0400] {embeddings.py:305} INFO - Processed job 9/10: Security Engineer, AWS Security Cloud Response at Amazon Web Services (AWS)
+[2025-04-13T18:16:35.792-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:35.794-0400] {embeddings.py:187} INFO - Extracted 20 skills
+[2025-04-13T18:16:36.239-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:36.284-0400] {embeddings.py:305} INFO - Processed job 10/10: Software Engineer III (Java/AWS) at JPMorganChase
+[2025-04-13T18:16:36.764-0400] {embeddings.py:140} INFO - Saved embeddings to s3://skillmatchai/jobs/embeddings/jobright_jobs_20250412_145425_embeddings_20250413_181636.json
+[2025-04-13T18:16:37.187-0400] {embeddings.py:285} INFO - Upserted 10 unique jobs to Pinecone
+[2025-04-13T18:16:37.189-0400] {job_scraping_pipeline.py:80} INFO - Successfully processed jobs/raw_files/jobright_jobs_20250412_145425.json
+[2025-04-13T18:16:37.189-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250413_130540.json
+[2025-04-13T18:16:37.370-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250413_130540.json
+[2025-04-13T18:16:38.630-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:38.631-0400] {embeddings.py:187} INFO - Extracted 30 skills
+[2025-04-13T18:16:38.858-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:38.869-0400] {embeddings.py:305} INFO - Processed job 1/10: Software Engineer II-R-235827 at Mastercard
+[2025-04-13T18:16:39.391-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:39.394-0400] {embeddings.py:187} INFO - Extracted 9 skills
+[2025-04-13T18:16:39.686-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:39.775-0400] {embeddings.py:305} INFO - Processed job 2/10: Software Engineer: Microsoft Software and Systems Academy (MSSA) at Microsoft
+[2025-04-13T18:16:40.626-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:40.628-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:16:40.955-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:40.957-0400] {embeddings.py:305} INFO - Processed job 3/10: Machine Learning Engineer (US) at Coram AI
+[2025-04-13T18:16:41.845-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:41.846-0400] {embeddings.py:187} INFO - Extracted 15 skills
+[2025-04-13T18:16:42.154-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:42.197-0400] {embeddings.py:305} INFO - Processed job 4/10: Software Engineer III (Full-Stack) at Walmart Data Ventures
+[2025-04-13T18:16:42.918-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:42.921-0400] {embeddings.py:187} INFO - Extracted 19 skills
+[2025-04-13T18:16:43.338-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:43.387-0400] {embeddings.py:305} INFO - Processed job 5/10: Software Engineer II, Java at S&P Global
+[2025-04-13T18:16:43.891-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:43.893-0400] {embeddings.py:187} INFO - Extracted 8 skills
+[2025-04-13T18:16:44.156-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:44.206-0400] {embeddings.py:305} INFO - Processed job 6/10: AIML - Core Infrastructure Engineering, Machine Learning Platform & Infrastructure at Apple
+[2025-04-13T18:16:44.797-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:44.800-0400] {embeddings.py:187} INFO - Extracted 9 skills
+[2025-04-13T18:16:45.154-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:45.231-0400] {embeddings.py:305} INFO - Processed job 7/10: Senior Machine Learning Engineer at Dynata
+[2025-04-13T18:16:45.776-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:45.779-0400] {embeddings.py:187} INFO - Extracted 10 skills
+[2025-04-13T18:16:45.991-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:46.005-0400] {embeddings.py:305} INFO - Processed job 8/10: Data Engineer (Remote/Hybrid) at Veterans United Home Loans
+[2025-04-13T18:16:47.110-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:47.113-0400] {embeddings.py:187} INFO - Extracted 28 skills
+[2025-04-13T18:16:47.571-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:47.573-0400] {embeddings.py:305} INFO - Processed job 9/10: DevOps (Embedded) Software Engineer 2 (C++) at Garmin
+[2025-04-13T18:16:48.348-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:48.353-0400] {embeddings.py:187} INFO - Extracted 19 skills
+[2025-04-13T18:16:48.640-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:48.716-0400] {embeddings.py:305} INFO - Processed job 10/10: Senior System Software Engineer - Dynamo and Triton Inference Server at NVIDIA
+[2025-04-13T18:16:49.162-0400] {embeddings.py:140} INFO - Saved embeddings to s3://skillmatchai/jobs/embeddings/jobright_jobs_20250413_130540_embeddings_20250413_181648.json
+[2025-04-13T18:16:49.698-0400] {embeddings.py:285} INFO - Upserted 10 unique jobs to Pinecone
+[2025-04-13T18:16:49.699-0400] {job_scraping_pipeline.py:80} INFO - Successfully processed jobs/raw_files/jobright_jobs_20250413_130540.json
+[2025-04-13T18:16:49.699-0400] {job_scraping_pipeline.py:77} INFO - Processing file: jobs/raw_files/jobright_jobs_20250413_130718.json
+[2025-04-13T18:16:49.774-0400] {embeddings.py:116} INFO - Loaded 10 jobs from jobs/raw_files/jobright_jobs_20250413_130718.json
+[2025-04-13T18:16:50.917-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:50.920-0400] {embeddings.py:187} INFO - Extracted 30 skills
+[2025-04-13T18:16:51.205-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[2025-04-13T18:16:51.241-0400] {embeddings.py:305} INFO - Processed job 1/10: Software Engineer II-R-235827 at Mastercard
+[2025-04-13T18:16:51.670-0400] {_client.py:1026} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-04-13T18:16:51.674-0400] {embeddings.py:187} INFO - Extracted 9 skills
+[2025-04-13T18:16:51.910-0400] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-04-13T18:16:51.912-0400] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-04-13T18:16:51.916-0400] {process_utils.py:132} INFO - Sending 15 to group 50458. PIDs of all processes in the group: [50458]
+[2025-04-13T18:16:51.916-0400] {process_utils.py:87} INFO - Sending the signal 15 to group 50458
+[2025-04-13T18:16:51.916-0400] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-13T18:16:51.917-0400] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-04-13T18:16:51.924-0400] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/airflow/dags/job_scraping_pipeline.py", line 78, in process_embeddings_task
+    result = processor.process_job_file(file_key)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/jobs/embeddings.py", line 303, in process_job_file
+    processed_job = self.process_job_data(job)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/jobs/embeddings.py", line 239, in process_job_data
+    embedding = self.get_embedding(job_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/backend/jobs/embeddings.py", line 197, in get_embedding
+    response = self.openai_client.embeddings.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/resources/embeddings.py", line 128, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 919, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/openai/_base_client.py", line 955, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/ssl.py", line 1233, in recv
+    return self.read(buflen)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/ssl.py", line 1106, in read
+    return self._sslobj.read(len)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-04-13T18:16:51.933-0400] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=job_scraping_pipeline, task_id=create_embeddings, execution_date=20250413T210000, start_date=20250413T221541, end_date=20250413T221651
+[2025-04-13T18:16:51.971-0400] {process_utils.py:80} INFO - Process psutil.Process(pid=50458, status='terminated', exitcode=2, started='18:15:41') (50458) terminated with exit code 2

@@ -1,0 +1,66 @@
+[2025-04-13T15:28:27.470-0400] {processor.py:161} INFO - Started process (PID=94309) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:28:27.471-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:28:27.471-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:28:27.471-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:28:27.708-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:28:27.708-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:28:27.878-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:28:27.902-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.433 seconds
+[2025-04-13T15:30:11.576-0400] {processor.py:161} INFO - Started process (PID=95112) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:30:11.577-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:30:11.577-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:30:11.577-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:30:11.820-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:30:11.820-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:30:11.991-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:30:12.015-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.440 seconds
+[2025-04-13T15:31:25.853-0400] {processor.py:161} INFO - Started process (PID=95683) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:31:25.854-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:31:25.854-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:31:25.854-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:31:26.148-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:31:26.148-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:31:26.365-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:31:26.390-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.538 seconds
+[2025-04-13T15:32:37.607-0400] {processor.py:161} INFO - Started process (PID=96234) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:32:37.609-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:32:37.609-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:37.609-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:32:37.895-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:37.895-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:32:38.103-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:32:38.128-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.523 seconds
+[2025-04-13T15:33:02.959-0400] {processor.py:161} INFO - Started process (PID=96482) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:33:02.959-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:33:02.959-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:33:02.959-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:33:03.256-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:33:03.256-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:33:03.453-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:33:03.479-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.521 seconds
+[2025-04-13T15:34:44.896-0400] {processor.py:161} INFO - Started process (PID=97230) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:34:44.897-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:34:44.897-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:44.897-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:34:45.218-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:45.218-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:34:45.440-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:34:45.466-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.572 seconds
+[2025-04-13T15:35:56.922-0400] {processor.py:161} INFO - Started process (PID=97742) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:35:56.923-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:35:56.923-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:35:56.923-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:35:57.177-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:35:57.177-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:35:57.354-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:35:57.379-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.459 seconds
+[2025-04-13T15:43:32.772-0400] {processor.py:161} INFO - Started process (PID=2407) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:43:32.773-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:43:32.774-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:43:32.774-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:43:33.055-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:43:33.055-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:43:33.276-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:43:33.302-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.530 seconds
+[2025-04-13T15:45:45.647-0400] {processor.py:161} INFO - Started process (PID=3563) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:45:45.649-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:45:45.650-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:45:45.650-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:45:45.947-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:45:45.947-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:45:46.182-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:45:46.207-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.561 seconds
+[2025-04-13T15:47:27.256-0400] {processor.py:161} INFO - Started process (PID=4419) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:47:27.258-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:47:27.258-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:47:27.258-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:47:27.597-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:47:27.597-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:47:27.821-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:47:27.846-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.591 seconds
+[2025-04-13T15:48:37.822-0400] {processor.py:161} INFO - Started process (PID=5195) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:48:37.824-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-04-13T15:48:37.824-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:48:37.824-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:48:38.129-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:48:38.129-0400] {utils.py:160} INFO - NumExpr defaulting to 8 threads.
+[2025-04-13T15:48:38.425-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py
+[2025-04-13T15:48:38.451-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/workday.py took 0.630 seconds

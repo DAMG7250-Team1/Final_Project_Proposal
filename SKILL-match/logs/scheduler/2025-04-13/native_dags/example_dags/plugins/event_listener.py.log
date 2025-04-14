@@ -1,0 +1,120 @@
+[2025-04-13T15:28:32.073-0400] {processor.py:161} INFO - Started process (PID=94335) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:28:32.073-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:28:32.074-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:28:32.074-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:28:32.074-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:28:32.100-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds
+[2025-04-13T15:30:15.699-0400] {processor.py:161} INFO - Started process (PID=95140) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:30:15.701-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:30:15.701-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:30:15.701-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:30:15.702-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:30:15.726-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds
+[2025-04-13T15:31:29.845-0400] {processor.py:161} INFO - Started process (PID=95726) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:31:29.846-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:31:29.846-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:31:29.846-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:31:29.846-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:31:29.872-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds
+[2025-04-13T15:32:42.508-0400] {processor.py:161} INFO - Started process (PID=96285) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:32:42.509-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:32:42.509-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:42.509-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:32:42.510-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:32:42.534-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.027 seconds
+[2025-04-13T15:33:06.472-0400] {processor.py:161} INFO - Started process (PID=96512) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:33:06.473-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:33:06.474-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:33:06.473-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:33:06.474-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:33:06.498-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.027 seconds
+[2025-04-13T15:34:48.993-0400] {processor.py:161} INFO - Started process (PID=97261) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:34:48.994-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:34:48.994-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:48.994-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:34:48.995-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:34:49.020-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.027 seconds
+[2025-04-13T15:36:01.071-0400] {processor.py:161} INFO - Started process (PID=97790) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:36:01.072-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:36:01.072-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:36:01.072-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:36:01.073-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:36:01.099-0400] {processor.py:186} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: import_error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 182, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 163, in _handle_dag_file_processing
+    result: tuple[int, int] = dag_file_processor.process_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 843, in process_file
+    DagFileProcessor.update_import_errors(
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 115, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 615, in update_import_errors
+    session.execute(
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1665, in execute
+    ) = compile_state_cls.orm_pre_session_exec(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1852, in orm_pre_session_exec
+    update_options = cls._do_pre_synchronize_fetch(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 2088, in _do_pre_synchronize_fetch
+    result = session.execute(
+             ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/opt/anaconda3/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: import_error
+[SQL: SELECT import_error.id 
+FROM import_error 
+WHERE (import_error.filename LIKE ? || '%')]
+[parameters: ('/opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py',)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-04-13T15:43:36.806-0400] {processor.py:161} INFO - Started process (PID=2432) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:43:36.808-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:43:36.808-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:43:36.808-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:43:36.808-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:43:36.834-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.029 seconds
+[2025-04-13T15:45:50.214-0400] {processor.py:161} INFO - Started process (PID=3591) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:45:50.217-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:45:50.217-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:45:50.217-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:45:50.217-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:45:50.241-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds
+[2025-04-13T15:47:31.980-0400] {processor.py:161} INFO - Started process (PID=4452) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:47:31.981-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:47:31.981-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:47:31.981-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:47:31.981-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:47:32.006-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.027 seconds
+[2025-04-13T15:48:41.848-0400] {processor.py:161} INFO - Started process (PID=5234) to work on /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:48:41.849-0400] {processor.py:830} INFO - Processing file /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2025-04-13T15:48:41.850-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:48:41.850-0400] {dagbag.py:540} INFO - Filling up the DagBag from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:48:41.850-0400] {processor.py:842} WARNING - No viable dags retrieved from /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py
+[2025-04-13T15:48:41.876-0400] {processor.py:183} INFO - Processing /opt/anaconda3/lib/python3.12/site-packages/airflow/example_dags/plugins/event_listener.py took 0.028 seconds

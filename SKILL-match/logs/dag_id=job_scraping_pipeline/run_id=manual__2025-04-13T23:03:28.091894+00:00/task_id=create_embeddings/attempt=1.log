@@ -1,0 +1,16 @@
+[2025-04-13T19:04:31.645-0400] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-04-13T19:04:31.664-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: job_scraping_pipeline.create_embeddings manual__2025-04-13T23:03:28.091894+00:00 [queued]>
+[2025-04-13T19:04:31.666-0400] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: job_scraping_pipeline.create_embeddings manual__2025-04-13T23:03:28.091894+00:00 [queued]>
+[2025-04-13T19:04:31.666-0400] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-04-13T19:04:31.669-0400] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): create_embeddings> on 2025-04-13 23:03:28.091894+00:00
+[2025-04-13T19:04:31.679-0400] {logging_mixin.py:188} WARNING - /opt/anaconda3/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=69428) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-13T19:04:31.679-0400] {standard_task_runner.py:63} INFO - Started process 69443 to run task
+[2025-04-13T19:04:31.681-0400] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'job_scraping_pipeline', 'create_embeddings', 'manual__2025-04-13T23:03:28.091894+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/job_scraping_pipeline.py', '--cfg-path', '/var/folders/0h/2g2z3yf96870c1b6bngz18w00000gn/T/tmp10g_a14x']
+[2025-04-13T19:04:31.682-0400] {standard_task_runner.py:91} INFO - Job 30: Subtask create_embeddings
+[2025-04-13T19:04:31.701-0400] {task_command.py:426} INFO - Running <TaskInstance: job_scraping_pipeline.create_embeddings manual__2025-04-13T23:03:28.091894+00:00 [running]> on host sahils-macbook-air-2.local
+[2025-04-13T19:04:31.875-0400] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='job_scraping_pipeline' AIRFLOW_CTX_TASK_ID='create_embeddings' AIRFLOW_CTX_EXECUTION_DATE='2025-04-13T23:03:28.091894+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-13T23:03:28.091894+00:00'
+[2025-04-13T19:04:31.875-0400] {taskinstance.py:430} INFO - ::endgroup::
+[2025-04-13T19:04:31.881-0400] {job_scraping_pipeline.py:67} INFO - Starting embeddings processing task
+[2025-04-13T19:04:32.022-0400] {local_task_job_runner.py:240} INFO - Task exited with return code -6
+[2025-04-13T19:04:32.027-0400] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-13T19:04:32.027-0400] {local_task_job_runner.py:222} INFO - ::endgroup::

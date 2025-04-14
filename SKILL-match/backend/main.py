@@ -1,30 +1,29 @@
 from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from user.resume import ResumeProcessor
-import sys
-from user.github import GitHubProcessor
-
 from pydantic import BaseModel
 from typing import Optional, Dict, Any, List
+import sys
 import uvicorn
 import uuid
 import logging
-from pathlib import Path
 import numpy as np
-
-logger = logging.getLogger(__name__)
+from pathlib import Path
 
 # Add the parent directory to the Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
+from user.resume import ResumeProcessor
+from user.github import GitHubProcessor
 from jobs.embeddings import JobEmbeddingsProcessor
 from user.user_embedding import UserEmbeddingProcessor
+
+logger = logging.getLogger(__name__)
 app = FastAPI(title="Resume Processing API")
 
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with specific origins
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -36,6 +35,7 @@ github_processor = GitHubProcessor()
 embeddings_processor = JobEmbeddingsProcessor()
 user_processor = UserEmbeddingProcessor()
 
+# Pydantic models
 class GitHubProfile(BaseModel):
     url: str
 
@@ -75,93 +75,53 @@ class JobMatchResponse(BaseModel):
 
 @app.post("/api/upload-resume", response_model=ResumeResponse)
 async def upload_resume(file: UploadFile, github_url: str):
-    """
-    Upload and process a resume file, then find matching jobs
-    """
     if not file.filename.lower().endswith('.pdf'):
         raise HTTPException(status_code=400, detail="Only PDF files are allowed")
-    
+
     try:
-        # Generate a unique user ID if not provided
         user_id = str(uuid.uuid4())
-        
-        # Read file content
         file_content = await file.read()
-        
-        # Process resume
-        result = resume_processor.process_resume(
-            file_content=file_content,
-            original_filename=file.filename
-        )
-        
-        # Ensure all required fields are present
-        required_fields = ['extracted_text', 's3_url', 'filename', 'markdown_url']
-        if not all(key in result for key in required_fields):
-            raise HTTPException(
-                status_code=500,
-                detail="Missing required fields in resume processing result"
-            )
-        
-        # Process GitHub profile if URL is provided
+
+        result = resume_processor.process_resume(file_content, file.filename)
+        required = ['extracted_text', 's3_url', 'filename', 'markdown_url']
+        if not all(k in result for k in required):
+            raise HTTPException(status_code=500, detail="Missing fields in resume processing")
+
         github_result = None
         if github_url:
             try:
                 github_result = github_processor.process_github_profile(github_url)
             except Exception as e:
-                print(f"Warning: Failed to process GitHub profile: {str(e)}")
-                github_result = {
-                    "status": "failed",
-                    "error": str(e)
-                }
-        
-        # Use proper combined embedding from UserEmbeddingProcessor
+                github_result = {"status": "failed", "error": str(e)}
+
         user_profile = user_processor.process_user_data(
             resume_url=result["markdown_url"],
             github_url=github_result["markdown_url"] if github_result else None
         )
-        
-        # Get the combined embedding and skills
+
         user_embedding = user_profile.get("combined_embedding", [])
         all_skills = user_profile.get("all_skills", [])
-        
-        # Log vector sanity check
-        logger.info(f"[Embedding] Norm: {np.linalg.norm(user_embedding):.4f}, Dimensions: {len(user_embedding)}")
-        
-        # Query Pinecone with user embedding
+
         job_vectors = embeddings_processor.index.query(
             vector=user_embedding,
             filter={"source": "job"},
-            top_k=50,  # Get more matches to filter
+            top_k=50,
             include_metadata=True
         )
-        
-        # Process matches with skill overlap
+
+        seen_jobs = set()
         job_matches = []
-        seen_jobs = set()  # Track seen jobs to avoid duplicates
-        
         for match in job_vectors.matches:
-            # Create unique job identifier
             job_key = f"{match.metadata.get('job_title', '')}_{match.metadata.get('company', '')}"
             if job_key in seen_jobs:
                 continue
             seen_jobs.add(job_key)
-            
-            # Get job skills
             job_skills = set(match.metadata.get("extracted_skills", []))
-            
-            # Calculate skill overlap
             matching_skills = set(all_skills).intersection(job_skills)
-            overlap_pct = (len(matching_skills) / min(len(job_skills), len(all_skills)) * 100) if job_skills and all_skills else 0
-            
-            # Skip if no skill overlap
             if not matching_skills:
                 continue
-            
-            # Adjust score based on skill overlap
-            base_score = match.score
-            skill_bonus = (overlap_pct / 100) * 0.4  # Add up to 40% bonus for skill overlap
-            adjusted_score = min(base_score + skill_bonus, 1.0)
-            
+            overlap_pct = (len(matching_skills) / min(len(job_skills), len(all_skills)) * 100) if job_skills and all_skills else 0
+            score = min(match.score + ((overlap_pct / 100) * 0.4), 1.0)
             job_matches.append({
                 "job_id": match.id,
                 "job_title": match.metadata["job_title"],
@@ -171,17 +131,14 @@ async def upload_resume(file: UploadFile, github_url: str):
                 "work_mode": match.metadata["work_mode"],
                 "seniority": match.metadata["seniority"],
                 "experience": match.metadata["experience"],
-                "similarity_score": adjusted_score,
+                "similarity_score": score,
                 "skills": list(matching_skills),
                 "skill_overlap_percent": overlap_pct
             })
-        
-        # Sort by adjusted score and skill overlap
+
         job_matches.sort(key=lambda x: (x["similarity_score"], x["skill_overlap_percent"]), reverse=True)
-        
-        # Return only top 10 matches
         job_matches = job_matches[:10]
-        
+
         return {
             "status": "success",
             "message": "Resume processed successfully",
@@ -191,7 +148,7 @@ async def upload_resume(file: UploadFile, github_url: str):
                 "resume_url": result["s3_url"],
                 "filename": result["filename"],
                 "markdown_url": result["markdown_url"],
-                "extracted_text_preview": result["extracted_text"][:500] + "..." if result["extracted_text"] else "",
+                "extracted_text_preview": result["extracted_text"][:500] + "...",
                 "embeddings_info": {
                     "status": "success",
                     "total_skills": len(all_skills),
@@ -208,17 +165,9 @@ async def upload_resume(file: UploadFile, github_url: str):
 
 @app.post("/api/process-github", response_model=GitHubResponse)
 async def process_github(profile: GitHubProfile):
-    """
-    Process GitHub profile and extract information
-    """
     try:
-        # Generate a unique user ID if not provided
         user_id = str(uuid.uuid4())
-        
-        # Process GitHub profile
         result = github_processor.process_github_profile(profile.url)
-        
-        # Process GitHub embeddings
         try:
             embeddings_result = embeddings_processor.process_github_markdown(
                 markdown_url=result["markdown_url"],
@@ -226,15 +175,13 @@ async def process_github(profile: GitHubProfile):
             )
             result["embeddings_info"] = embeddings_result
         except Exception as e:
-            # Log the error but don't fail the request
-            print(f"Warning: Failed to process GitHub embeddings: {str(e)}")
             result["embeddings_info"] = {
                 "status": "failed",
                 "total_skills": 0,
                 "vectors_created": 0,
                 "error": str(e)
             }
-        
+
         return {
             "status": "success",
             "message": "GitHub profile processed successfully",
@@ -254,16 +201,10 @@ async def process_github(profile: GitHubProfile):
 @app.post("/api/match-jobs", response_model=JobMatchResponse)
 async def match_jobs(request: JobMatchRequest):
     try:
-        # Combine and deduplicate skills
         all_skills = list(set(request.resume_skills + request.github_skills))
-        
-        # Create a text query from skills
         skills_text = ", ".join(all_skills)
-        query_text = f"Find jobs requiring these skills: {skills_text}"
-        
-        # Find matching jobs
-        result = embeddings_processor.find_matching_jobs(query_text=query_text)
-        
+        result = embeddings_processor.find_matching_jobs(query_text=skills_text)
+
         if result["status"] == "error":
             return JobMatchResponse(
                 status="error",
@@ -272,36 +213,33 @@ async def match_jobs(request: JobMatchRequest):
                 matches=[],
                 error=result.get("error", "Unknown error occurred")
             )
-        
-        # Transform matches to match frontend expectations
+
         transformed_matches = []
         for match in result["matches"]:
-            metadata = match.get("metadata", {})
+            m = match["metadata"]
             transformed_matches.append({
-                "job_title": metadata.get("job_title", "Unknown Title"),
-                "company": metadata.get("company", "Unknown Company"),
-                "location": metadata.get("location", "Unknown Location"),
-                "job_type": metadata.get("job_type", "Unknown Type"),
-                "work_mode": metadata.get("work_mode", "Unknown Mode"),
-                "seniority": metadata.get("seniority", "Unknown Level"),
-                "salary": metadata.get("salary", "Not Specified"),
-                "experience": metadata.get("experience", "Not Specified"),
-                "responsibilities": metadata.get("responsibilities", "Not Specified"),
-                "qualifications": metadata.get("qualifications", "Not Specified"),
-                "skills": metadata.get("skills", "Not Specified"),
+                "job_title": m.get("job_title", "Unknown Title"),
+                "company": m.get("company", "Unknown Company"),
+                "location": m.get("location", "Unknown Location"),
+                "job_type": m.get("job_type", "Unknown Type"),
+                "work_mode": m.get("work_mode", "Unknown Mode"),
+                "seniority": m.get("seniority", "Unknown Level"),
+                "salary": m.get("salary", "Not Specified"),
+                "experience": m.get("experience", "Not Specified"),
+                "responsibilities": m.get("responsibilities", "Not Specified"),
+                "qualifications": m.get("qualifications", "Not Specified"),
+                "skills": m.get("skills", "Not Specified"),
                 "similarity_score": match.get("similarity", 0.0),
                 "match_category": match.get("category", "unknown")
             })
-        
+
         return JobMatchResponse(
             status="success",
             total_skills=len(all_skills),
             total_matches=result["total_matches"],
             matches=transformed_matches
         )
-        
     except Exception as e:
-        logger.error(f"Error matching jobs: {str(e)}")
         return JobMatchResponse(
             status="error",
             total_skills=0,
@@ -310,34 +248,8 @@ async def match_jobs(request: JobMatchRequest):
             error=str(e)
         )
 
-@app.post("/api/batch-match-jobs", response_model=JobMatchResponse)
-async def batch_match_jobs(jobs: List[JobData]):
-    """
-    Process multiple job descriptions and find matching user profiles
-    """
-    try:
-        results = []
-        for job in jobs:
-            job_dict = job.dict()
-            matches = embeddings_processor.get_job_matches(job_dict)
-            results.append({
-                "job_info": matches["job_info"],
-                "matches": matches["matches"]
-            })
-        
-        return {
-            "status": "success",
-            "message": f"Processed {len(results)} jobs successfully",
-            "data": {
-                "results": results
-            }
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
 @app.get("/api/health")
 async def health_check():
-    """Health check endpoint"""
     return {"status": "healthy"}
 
 if __name__ == "__main__":

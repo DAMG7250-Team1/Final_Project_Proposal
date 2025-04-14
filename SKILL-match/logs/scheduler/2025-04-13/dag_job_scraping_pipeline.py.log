@@ -1,0 +1,72 @@
+[2025-04-13T15:28:23.540-0400] {processor.py:161} INFO - Started process (PID=94280) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:28:23.540-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:28:23.541-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:28:23.541-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:28:23.551-0400] {logging_mixin.py:188} INFO - ImportError: No module named 'jobs'
+[2025-04-13T15:28:23.552-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:28:23.551-0400] {dagbag.py:350} ERROR - Failed to import: /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py", line 16, in <module>
+    from jobs.scraper import scrape_jobs
+ModuleNotFoundError: No module named 'jobs'
+[2025-04-13T15:28:23.552-0400] {processor.py:842} WARNING - No viable dags retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:28:23.580-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.041 seconds
+[2025-04-13T15:30:07.652-0400] {processor.py:161} INFO - Started process (PID=95084) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:30:07.653-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:30:07.653-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:30:07.653-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:30:07.662-0400] {logging_mixin.py:188} INFO - ImportError: No module named 'jobs'
+[2025-04-13T15:30:07.663-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:30:07.662-0400] {dagbag.py:350} ERROR - Failed to import: /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py", line 16, in <module>
+    from jobs.scraper import scrape_jobs
+ModuleNotFoundError: No module named 'jobs'
+[2025-04-13T15:30:07.663-0400] {processor.py:842} WARNING - No viable dags retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:30:07.690-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.039 seconds
+[2025-04-13T15:31:21.695-0400] {processor.py:161} INFO - Started process (PID=95655) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:31:21.697-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:31:21.697-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:31:21.697-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:31:21.708-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:31:21.707-0400] {dagbag.py:350} ERROR - Failed to import: /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py", line 8, in <module>
+    from jobs.scraper import scrape_jobs
+ModuleNotFoundError: No module named 'jobs'
+[2025-04-13T15:31:21.708-0400] {processor.py:842} WARNING - No viable dags retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:31:21.736-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.042 seconds
+[2025-04-13T15:32:33.629-0400] {processor.py:161} INFO - Started process (PID=96218) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:33.629-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:32:33.629-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:33.629-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:33.735-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:33.735-0400] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2025-04-13T15:32:34.212-0400] {processor.py:840} INFO - DAG(s) 'job_scraping_pipeline' retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:34.273-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.273-0400] {override.py:1930} INFO - Created Permission View: can edit on DAG:job_scraping_pipeline
+[2025-04-13T15:32:34.275-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.275-0400] {override.py:1930} INFO - Created Permission View: can read on DAG:job_scraping_pipeline
+[2025-04-13T15:32:34.277-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.277-0400] {override.py:1930} INFO - Created Permission View: can delete on DAG:job_scraping_pipeline
+[2025-04-13T15:32:34.277-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.277-0400] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-04-13T15:32:34.280-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.280-0400] {dag.py:3118} INFO - Creating ORM DAG for job_scraping_pipeline
+[2025-04-13T15:32:34.283-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:34.283-0400] {dag.py:3954} INFO - Setting next_dagrun for job_scraping_pipeline to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-13T15:32:34.289-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.661 seconds
+[2025-04-13T15:32:58.170-0400] {processor.py:161} INFO - Started process (PID=96448) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:58.171-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:32:58.171-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:58.171-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:58.251-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:58.251-0400] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2025-04-13T15:32:58.684-0400] {processor.py:840} INFO - DAG(s) 'job_scraping_pipeline' retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:32:58.695-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:58.695-0400] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-04-13T15:32:58.723-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:32:58.722-0400] {dag.py:3954} INFO - Setting next_dagrun for job_scraping_pipeline to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-13T15:32:58.729-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.560 seconds
+[2025-04-13T15:34:40.295-0400] {processor.py:161} INFO - Started process (PID=97203) to work on /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:34:40.298-0400] {processor.py:830} INFO - Processing file /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py for tasks to queue
+[2025-04-13T15:34:40.299-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:40.299-0400] {dagbag.py:540} INFO - Filling up the DagBag from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:34:40.397-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:40.396-0400] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2025-04-13T15:34:40.826-0400] {processor.py:840} INFO - DAG(s) 'job_scraping_pipeline' retrieved from /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py
+[2025-04-13T15:34:40.861-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:40.861-0400] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-04-13T15:34:40.867-0400] {logging_mixin.py:188} INFO - [2025-04-13T15:34:40.867-0400] {dag.py:3954} INFO - Setting next_dagrun for job_scraping_pipeline to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-13T15:34:40.873-0400] {processor.py:183} INFO - Processing /Users/sahilkasliwal/Desktop/Final_Project_Proposal/SKILL-match/dags/dag_job_scraping_pipeline.py took 0.579 seconds

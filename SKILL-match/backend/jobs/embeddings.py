@@ -192,7 +192,9 @@ class JobEmbeddingsProcessor:
             return []
 
     def get_embedding(self, text: str) -> List[float]:
-        """Get embedding for a text using OpenAI API"""
+        """
+        Get embedding for a text using OpenAI API
+        """
         try:
             response = self.openai_client.embeddings.create(
                 model=self.embedding_model,
@@ -200,7 +202,6 @@ class JobEmbeddingsProcessor:
             )
             embedding = response.data[0].embedding
             return embedding
-        
         except Exception as e:
             logger.error(f"Error getting embedding: {str(e)}")
             raise
